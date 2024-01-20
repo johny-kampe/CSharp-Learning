@@ -1,6 +1,6 @@
 # .gitignore for C# .NET Core REST API
 
-Build ASP.NET Core Web API/NZWalks/NZWalks/.vs/NZWalks/FileContentIndex/
+"Build ASP.NET Core Web API/NZWalks/NZWalks/.vs/NZWalks/FileContentIndex/"
 
 # Compiled files
 bin/

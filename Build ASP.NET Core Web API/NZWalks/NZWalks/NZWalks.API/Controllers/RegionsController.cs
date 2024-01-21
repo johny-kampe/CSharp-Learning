@@ -53,7 +53,6 @@ namespace NZWalks.API.Controllers
             }
 
             // Return DTOs
-
             return Ok(regionsDto);
         }
 

@@ -19,6 +19,7 @@ namespace NZWalks.API.Controllers
             this.mapper = mapper;
             this.walkRepository = walkRepository;
         }
+
         // CREATE Walk
         // POST: /api/walks
         [HttpPost]
@@ -32,6 +33,17 @@ namespace NZWalks.API.Controllers
             //Map Domain model to DTO
 
             return Ok(mapper.Map<WalkDto>(walkDomainModel));
+        }
+
+        // GET Walks
+        // GET: /api/walks
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var walksDomainModel = await walkRepository.GetAllAsync();
+
+            //Map Domain Model to Dto
+            return Ok(mapper.Map<List<WalkDto>>(walksDomainModel));
         }
     }
 }

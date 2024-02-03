@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using NZWalks.API.CustomActionFilters;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
 using NZWalks.API.Repositories;
@@ -14,7 +15,7 @@ namespace NZWalks.API.Controllers
     {
         private readonly IMapper mapper;
         private readonly IWalkRepository walkRepository;
-        public WalksController(IMapper mapper, IWalkRepository walkRepository) 
+        public WalksController(IMapper mapper, IWalkRepository walkRepository)
         {
             this.mapper = mapper;
             this.walkRepository = walkRepository;
@@ -23,8 +24,10 @@ namespace NZWalks.API.Controllers
         // CREATE Walk
         // POST: /api/walks
         [HttpPost]
+        [ValidateModel]
         public async Task<IActionResult> Create([FromBody] AddWalkRequestDto addWalkRequestDto)
         {
+
             // Map DTO to Domain Model
             var walkDomainModel = mapper.Map<Walk>(addWalkRequestDto);
 
@@ -45,7 +48,7 @@ namespace NZWalks.API.Controllers
             //Map Domain Model to Dto
             return Ok(mapper.Map<List<WalkDto>>(walksDomainModel));
         }
-        
+
         // GET Walks By Id
         // GET: /api/walks/{id}
         [HttpGet]
@@ -54,7 +57,7 @@ namespace NZWalks.API.Controllers
         {
             var walksDomainModel = await walkRepository.GetByIdAsync(id);
 
-            if(walksDomainModel == null)
+            if (walksDomainModel == null)
             {
                 return NotFound();
             }
@@ -67,6 +70,7 @@ namespace NZWalks.API.Controllers
         // PUT: /api/walks/{id}
         [HttpPut]
         [Route("{id:Guid}")]
+        [ValidateModel]
         public async Task<IActionResult> Update([FromRoute] Guid id, UpdateWalkRequestDto updateWalkRequestDto)
         {
             // Map DTO to Domain Model
@@ -91,7 +95,7 @@ namespace NZWalks.API.Controllers
         {
             var walkDomainModel = await walkRepository.DeleteAsync(id);
 
-            if(walkDomainModel == null)
+            if (walkDomainModel == null)
             {
                 return NotFound();
             }

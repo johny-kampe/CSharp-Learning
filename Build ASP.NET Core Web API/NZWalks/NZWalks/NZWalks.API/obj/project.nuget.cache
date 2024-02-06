@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "i1JQKl/hl3d08qDkgGHaA8z0AZVboj103EaM0KpQvNHKMbggY7k2a+31ciHFgw6BBlUqmCnQfqMImzB7hzlgnw==",
-=======
   "dgSpecHash": "HaetoV2Al9QVHnqYoYaWgPoF1g8YM5N1QdPKNmTqQMykE+SvEmxH+j1Vy3kKBXSyZ3s8t0+BNCG4QMxhtlIH2A==",
->>>>>>> Section8
   "success": true,
   "projectFilePath": "C:\\Work\\GitHub\\CSharp-Learning\\Build ASP.NET Core Web API\\NZWalks\\NZWalks\\NZWalks.API\\NZWalks.API.csproj",
   "expectedPackageFiles": [

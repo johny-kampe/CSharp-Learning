@@ -37,7 +37,7 @@ namespace NZWalks.API.Repositories
                 signingCredentials: credentials
                 );
 
-
+            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

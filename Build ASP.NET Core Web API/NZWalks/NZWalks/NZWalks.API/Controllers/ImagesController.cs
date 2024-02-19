@@ -30,7 +30,7 @@ namespace NZWalks.API.Controllers
                 var ImageDomainModel = new Image
                 {
                     File = request.File,
-                    FileExtension = Path.GetExtension(request.FileName),
+                    FileExtension = Path.GetExtension(request.File.FileName),
                     FileSizeInBytes = request.File.Length,
                     FileName = request.FileName,
                     FileDescription = request.FileDescription
@@ -48,11 +48,12 @@ namespace NZWalks.API.Controllers
         private void ValidateFileUpload(ImageUploadRequestDto request)
         {
             var allowedExtensions = new string[] { ".jpg", ".jpeg", ".png" };
+            var imageTest = request;
 
-            //if (!allowedExtensions.Contains(Path.GetExtension(request.File.Name)))
-            //{
-            //    ModelState.AddModelError("file", "Unsupported file extension.");
-            //}
+            if (!allowedExtensions.Contains(Path.GetExtension(request.File.FileName)))
+            {
+                ModelState.AddModelError("file", "Unsupported file extension.");
+            }
 
             if (request.File.Length > 10485760)
             {

@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "dgSpecHash": "GYl1jR89Bh76vHR9JD6Pf4CjlP0WDihxhFhHufkYGpISTuZdErZvaYIg64gb0ikTfqHQxa91WxESNmiwgFmfTA==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\GitHub\\CSharp-Learning\\Build ASP.NET Core Web API\\Web-API-Versioning.API\\Web-API-Versioning\\Web-API-Versioning.API\\Web-API-Versioning.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\johnk\\.nuget\\packages\\asp.versioning.abstractions\\7.0.0\\asp.versioning.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\asp.versioning.http\\7.1.0\\asp.versioning.http.7.1.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\asp.versioning.mvc\\7.1.1\\asp.versioning.mvc.7.1.1.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.10\\microsoft.aspnetcore.openapi.7.0.10.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\johnk\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

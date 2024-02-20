@@ -169,3 +169,12 @@ C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalk
 C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\NZWalks.API.pdb
 C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\NZWalks.API.genruntimeconfig.cache
 C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\obj\Debug\net7.0\ref\NZWalks.API.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.AspNetCore.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Extensions.Hosting.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Extensions.Logging.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Formatting.Compact.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Settings.Configuration.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Sinks.Console.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Sinks.Debug.dll
+C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\bin\Debug\net7.0\Serilog.Sinks.File.dll

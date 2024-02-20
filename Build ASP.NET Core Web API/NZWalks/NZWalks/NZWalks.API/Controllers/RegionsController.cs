@@ -8,41 +8,62 @@ using NZWalks.API.Data;
 using NZWalks.API.Models.Domain;
 using NZWalks.API.Models.DTO;
 using NZWalks.API.Repositories;
+using System.Text.Json;
 
 namespace NZWalks.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
     public class RegionsController : ControllerBase
     {
         private readonly NZWalksDbContext dbContext;
         private readonly IRegionRepository regionRepository;
         private readonly IMapper mapper;
+        private readonly ILogger<RegionsController> logger;
 
         public RegionsController(
             NZWalksDbContext dbContext,
             IRegionRepository regionRepository,
-            IMapper mapper
+            IMapper mapper,
+            ILogger<RegionsController> logger
         )
         {
             this.dbContext = dbContext;
             this.regionRepository = regionRepository;
             this.mapper = mapper;
+            this.logger = logger;
         }
         // GET ALL REGIONS
         // GET: https://localhost:portnumber/api/regions
         [HttpGet]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetAll()
         {
-            // Get Data From Database - Domain models
-            var regionsDomain = await regionRepository.GetAllAsync();
+            try
+            {
+                logger.LogInformation("GetAllRegions Action Method was invoked");
 
-            var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+                logger.LogWarning("This is a warning log");
 
-            // Return DTOs
-            return Ok(regionsDto);
+                logger.LogError("This is an error log");
+
+                throw new Exception("This is a custom exception");
+
+                // Get Data From Database - Domain models
+                var regionsDomain = await regionRepository.GetAllAsync();
+
+                var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+
+                logger.LogInformation($"Finished GetAllRegions request with data: {JsonSerializer.Serialize(regionsDomain)}");
+
+                // Return DTOs
+                return Ok(regionsDto);
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, ex.Message);
+                throw;
+            }
         }
 
         // GET REGION BY ID

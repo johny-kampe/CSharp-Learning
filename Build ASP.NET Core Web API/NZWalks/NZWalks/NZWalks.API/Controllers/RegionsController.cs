@@ -41,6 +41,8 @@ namespace NZWalks.API.Controllers
         {
             try
             {
+                throw new Exception("This is a new exception");
+
                 logger.LogInformation("GetAllRegions Action Method was invoked");
 
                 logger.LogWarning("This is a warning log");

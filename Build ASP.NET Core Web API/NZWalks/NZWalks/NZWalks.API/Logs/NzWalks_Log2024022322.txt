@@ -1,0 +1,80 @@
+2024-02-23 22:02:29.489 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-23 22:02:30.403 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-23 22:02:30.418 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-23 22:02:30.423 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-23 22:02:30.428 +01:00 [INF] Hosting environment: Development
+2024-02-23 22:02:30.429 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-23 22:02:31.554 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-23 22:02:32.143 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 590.7291ms
+2024-02-23 22:02:32.241 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-23 22:02:32.242 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-23 22:02:32.476 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 235.5488ms
+2024-02-23 22:02:32.522 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 280.1857ms
+2024-02-23 22:02:32.642 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-23 22:02:32.955 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 313.0440ms
+2024-02-23 22:13:57.153 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-23 22:13:57.716 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-23 22:13:57.752 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-23 22:13:57.755 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-23 22:13:57.757 +01:00 [INF] Hosting environment: Development
+2024-02-23 22:13:57.759 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-23 22:13:58.421 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-23 22:13:58.762 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 345.6400ms
+2024-02-23 22:13:58.806 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-23 22:13:58.809 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-23 22:13:58.828 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 21.4695ms
+2024-02-23 22:13:58.837 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 28.4713ms
+2024-02-23 22:13:59.002 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-23 22:13:59.332 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 325.6661ms
+2024-02-23 22:14:12.633 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-23 22:14:12.851 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-23 22:14:12.894 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-23 22:14:13.742 +01:00 [ERR] This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+2024-02-23 22:14:13.920 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1013.197ms
+2024-02-23 22:14:13.931 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-23 22:14:13.984 +01:00 [ERR] de255a38-a4c2-46ed-b923-c243e8711d37 : This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Middlewares\ExceptionHandlerMiddleware.cs:line 23
+2024-02-23 22:14:14.049 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 500 - application/json;+charset=utf-8 1416.6030ms
+2024-02-23 22:15:13.880 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-23 22:15:13.894 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-23 22:15:13.908 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-23 22:15:13.959 +01:00 [ERR] This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+2024-02-23 22:15:13.994 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 75.705ms
+2024-02-23 22:15:13.998 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-23 22:15:14.025 +01:00 [ERR] 458073a8-6906-49b5-a352-7462b588c4cc : This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Middlewares\ExceptionHandlerMiddleware.cs:line 23
+2024-02-23 22:15:14.040 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 500 - application/json;+charset=utf-8 159.8582ms

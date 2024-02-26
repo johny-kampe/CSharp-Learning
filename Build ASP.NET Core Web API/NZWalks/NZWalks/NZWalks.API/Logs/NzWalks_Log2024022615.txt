@@ -1,0 +1,138 @@
+2024-02-26 15:51:16.685 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-26 15:51:17.030 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-26 15:51:17.037 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-26 15:51:17.039 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 15:51:17.040 +01:00 [INF] Hosting environment: Development
+2024-02-26 15:51:17.041 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-26 15:51:18.381 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-26 15:51:18.966 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 587.6557ms
+2024-02-26 15:51:19.252 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-26 15:51:19.255 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-26 15:51:19.322 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 69.5796ms
+2024-02-26 15:51:19.359 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 103.9552ms
+2024-02-26 15:51:19.577 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-26 15:51:19.888 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 310.1472ms
+2024-02-26 15:51:42.645 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-26 15:51:42.800 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:51:42.849 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-26 15:51:43.436 +01:00 [ERR] This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+2024-02-26 15:51:43.564 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 703.8985ms
+2024-02-26 15:51:43.571 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:51:43.604 +01:00 [ERR] f1e970b3-cace-4264-999b-8422deeb1956 : This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Middlewares\ExceptionHandlerMiddleware.cs:line 23
+2024-02-26 15:51:43.648 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 500 - application/json;+charset=utf-8 1002.8559ms
+2024-02-26 15:55:05.079 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-26 15:55:07.050 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-26 15:55:07.100 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-26 15:55:07.103 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 15:55:07.104 +01:00 [INF] Hosting environment: Development
+2024-02-26 15:55:07.106 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-26 15:55:08.016 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-26 15:55:08.559 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 546.9777ms
+2024-02-26 15:55:08.617 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-26 15:55:08.636 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 18.8829ms
+2024-02-26 15:55:08.648 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-26 15:55:08.689 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.5822ms
+2024-02-26 15:55:08.744 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-26 15:55:08.914 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 169.9157ms
+2024-02-26 15:55:15.118 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/api/Regions - -
+2024-02-26 15:55:15.300 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:55:15.348 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-26 15:55:16.034 +01:00 [ERR] This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+2024-02-26 15:55:16.162 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 801.0384ms
+2024-02-26 15:55:16.171 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:55:16.214 +01:00 [ERR] c6f0c572-a925-4c31-9d0a-8baa187dfdd2 : This is a new exception
+System.Exception: This is a new exception
+   at NZWalks.API.Controllers.RegionsController.GetAll() in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Controllers\RegionsController.cs:line 44
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at NZWalks.API.Middlewares.ExceptionHandlerMiddleware.InvokeAsync(HttpContext httpContext) in C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API\Middlewares\ExceptionHandlerMiddleware.cs:line 23
+2024-02-26 15:55:16.260 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/api/Regions - - - 500 - application/json;+charset=utf-8 1142.3901ms
+2024-02-26 15:56:48.355 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-26 15:56:48.627 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-26 15:56:48.634 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-26 15:56:48.636 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 15:56:48.637 +01:00 [INF] Hosting environment: Development
+2024-02-26 15:56:48.638 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-26 15:56:50.240 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-26 15:56:50.678 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 441.2689ms
+2024-02-26 15:56:50.854 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-26 15:56:50.874 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 20.6443ms
+2024-02-26 15:56:50.889 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-26 15:56:50.954 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.5441ms
+2024-02-26 15:56:51.186 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-26 15:56:51.342 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 156.1734ms
+2024-02-26 15:57:00.315 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/api/Regions - -
+2024-02-26 15:57:00.471 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:00.515 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-26 15:57:04.343 +01:00 [INF] Executed DbCommand (74ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-26 15:57:04.539 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-26 15:57:04.572 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 4045.7338ms
+2024-02-26 15:57:04.576 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:04.589 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/api/Regions - - - 200 - application/json;+charset=utf-8 4273.3562ms
+2024-02-26 15:57:11.343 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/Regions - -
+2024-02-26 15:57:11.352 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:11.355 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-26 15:57:11.410 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-26 15:57:11.423 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-26 15:57:11.438 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 80.5648ms
+2024-02-26 15:57:11.441 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:11.446 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/Regions - - - 200 - application/json;+charset=utf-8 102.8777ms
+2024-02-26 15:57:26.488 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-26 15:57:26.748 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-26 15:57:26.749 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-26 15:57:26.752 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-26 15:57:26.753 +01:00 [INF] Hosting environment: Development
+2024-02-26 15:57:26.754 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-26 15:57:28.438 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-26 15:57:29.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 646.1119ms
+2024-02-26 15:57:29.304 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-26 15:57:29.313 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-26 15:57:29.316 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 12.0647ms
+2024-02-26 15:57:29.347 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 34.1845ms
+2024-02-26 15:57:30.086 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-26 15:57:30.278 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 224.8308ms
+2024-02-26 15:57:43.477 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/Regions - -
+2024-02-26 15:57:43.596 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:43.632 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-26 15:57:46.569 +01:00 [INF] Executed DbCommand (84ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-26 15:57:46.742 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-26 15:57:46.789 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 3144.8941ms
+2024-02-26 15:57:46.794 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-26 15:57:46.814 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/Regions - - - 200 - application/json;+charset=utf-8 3337.5514ms

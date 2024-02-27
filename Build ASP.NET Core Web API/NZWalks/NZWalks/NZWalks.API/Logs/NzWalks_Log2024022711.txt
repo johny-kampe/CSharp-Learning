@@ -100,3 +100,371 @@ WHERE [r].[Id] = @__id_0
 2024-02-27 11:10:39.220 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.7979ms
 2024-02-27 11:10:39.295 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
 2024-02-27 11:10:39.313 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.7103ms
+2024-02-27 11:24:17.259 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:24:17.722 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:24:17.735 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:24:17.740 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:24:17.744 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:24:17.745 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:24:18.647 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:24:19.038 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 396.2443ms
+2024-02-27 11:24:19.523 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:24:19.555 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:24:19.589 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 65.7865ms
+2024-02-27 11:24:19.660 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 105.2466ms
+2024-02-27 11:24:19.823 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:24:20.180 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 357.8508ms
+2024-02-27 11:24:45.232 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:24:45.343 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:24:45.366 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:24:47.404 +01:00 [INF] Executed DbCommand (58ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:24:47.529 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:24:47.563 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 2190.9677ms
+2024-02-27 11:24:47.566 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:24:47.578 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 2346.5804ms
+2024-02-27 11:24:50.826 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:24:50.831 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:24:50.845 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:24:51.011 +01:00 [INF] Executed DbCommand (29ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:24:51.019 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:24:51.021 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 173.4077ms
+2024-02-27 11:24:51.023 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:24:51.025 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 199.2196ms
+2024-02-27 11:28:08.266 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:28:08.296 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 29.7609ms
+2024-02-27 11:28:08.342 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:28:08.346 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 4.1578ms
+2024-02-27 11:28:08.368 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:28:08.387 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.7124ms
+2024-02-27 11:28:08.485 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:28:08.508 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 23.0850ms
+2024-02-27 11:28:08.620 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:28:08.624 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:28:08.628 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:28:08.702 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:28:08.705 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:28:08.707 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 76.4654ms
+2024-02-27 11:28:08.708 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:28:08.709 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 88.5952ms
+2024-02-27 11:28:16.519 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:28:16.521 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:28:16.522 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:28:16.526 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:28:16.530 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:28:16.532 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 8.2566ms
+2024-02-27 11:28:16.533 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:28:16.534 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 14.9561ms
+2024-02-27 11:32:18.306 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:32:18.695 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:32:18.698 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:32:18.708 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:32:18.711 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:32:18.711 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:32:20.135 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:32:20.655 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 523.9081ms
+2024-02-27 11:32:20.737 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:32:20.788 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:32:20.827 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 88.9566ms
+2024-02-27 11:32:20.848 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 56.4838ms
+2024-02-27 11:32:21.207 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:32:21.375 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 168.9355ms
+2024-02-27 11:32:22.864 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:32:22.948 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:32:22.965 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:32:24.375 +01:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:32:24.491 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:32:24.524 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1553.7174ms
+2024-02-27 11:32:24.526 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:32:24.536 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 1671.9156ms
+2024-02-27 11:32:26.662 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:32:26.667 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:32:26.676 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:32:26.843 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:32:26.849 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:32:26.851 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 172.529ms
+2024-02-27 11:32:26.852 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:32:26.855 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 192.8406ms
+2024-02-27 11:32:38.839 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:32:38.842 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:32:38.843 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:32:38.902 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:32:38.906 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:32:38.911 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 66.7946ms
+2024-02-27 11:32:38.913 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:32:38.915 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 76.0212ms
+2024-02-27 11:41:58.725 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:41:59.515 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:41:59.552 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:41:59.556 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:41:59.558 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:41:59.567 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:42:00.324 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:42:00.717 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 394.7734ms
+2024-02-27 11:42:00.781 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:42:00.803 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 21.5534ms
+2024-02-27 11:42:00.812 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:42:00.840 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 27.0079ms
+2024-02-27 11:42:00.916 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:42:01.052 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 136.6621ms
+2024-02-27 11:42:03.704 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:42:03.773 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:42:03.791 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:42:05.275 +01:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:42:05.370 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:42:05.405 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1608.683ms
+2024-02-27 11:42:05.407 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:42:05.419 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 1715.3333ms
+2024-02-27 11:42:11.989 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:42:11.992 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:12.003 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:42:12.175 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:42:12.184 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:42:12.186 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 181.017ms
+2024-02-27 11:42:12.187 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:12.188 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 199.8538ms
+2024-02-27 11:42:39.705 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:42:39.744 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 38.9291ms
+2024-02-27 11:42:39.795 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:42:39.800 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 5.4127ms
+2024-02-27 11:42:39.813 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:42:39.840 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.7843ms
+2024-02-27 11:42:39.900 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:42:39.918 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 17.9006ms
+2024-02-27 11:42:42.637 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:42:42.641 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:42.646 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:42:42.724 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:42:42.730 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:42:42.733 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 85.6307ms
+2024-02-27 11:42:42.734 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:42.736 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 98.8893ms
+2024-02-27 11:42:48.797 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:42:48.800 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:48.802 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:42:48.813 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:42:48.816 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:42:48.819 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 12.3932ms
+2024-02-27 11:42:48.821 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:42:48.823 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 25.2074ms
+2024-02-27 11:43:08.974 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:43:08.986 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:43:08.988 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:43:08.994 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:43:08.997 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:43:09.001 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 11.3396ms
+2024-02-27 11:43:09.002 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:43:09.003 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 29.7082ms
+2024-02-27 11:43:10.048 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:43:10.082 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 33.5146ms
+2024-02-27 11:43:10.160 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:43:10.164 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.8313ms
+2024-02-27 11:43:10.219 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:43:10.240 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.3791ms
+2024-02-27 11:43:10.325 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:43:10.335 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 10.1397ms
+2024-02-27 11:43:42.643 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:43:43.557 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:43:43.559 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:43:43.579 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:43:43.580 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:43:43.582 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:43:45.013 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:43:45.299 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 295.5572ms
+2024-02-27 11:43:45.351 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:43:45.362 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:43:45.369 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 17.9123ms
+2024-02-27 11:43:45.392 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 30.6111ms
+2024-02-27 11:43:45.479 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:43:45.684 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.0737ms
+2024-02-27 11:43:54.162 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:43:54.255 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:43:54.280 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:43:55.892 +01:00 [INF] Executed DbCommand (34ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:43:55.995 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:43:56.030 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1742.8131ms
+2024-02-27 11:43:56.033 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:43:56.048 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 1885.4517ms
+2024-02-27 11:44:05.039 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:44:05.410 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:44:05.433 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:44:05.463 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:44:05.468 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:44:05.469 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:44:06.675 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:44:07.151 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 480.6060ms
+2024-02-27 11:44:07.220 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:44:07.278 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:44:07.314 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 93.7758ms
+2024-02-27 11:44:07.353 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 74.6572ms
+2024-02-27 11:44:07.486 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:44:07.852 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 366.4517ms
+2024-02-27 11:44:10.280 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:44:10.364 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:44:10.381 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:44:11.915 +01:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:44:12.000 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:44:12.027 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1640.32ms
+2024-02-27 11:44:12.030 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:44:12.041 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 1760.7418ms
+2024-02-27 11:44:14.538 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:44:14.543 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:44:14.551 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:44:14.721 +01:00 [INF] Executed DbCommand (37ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:44:14.732 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:44:14.736 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 183.3514ms
+2024-02-27 11:44:14.740 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:44:14.743 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 205.0797ms
+2024-02-27 11:45:42.196 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:45:42.839 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:45:42.937 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:45:42.951 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:45:42.955 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:45:42.956 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:45:44.578 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:45:44.979 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 401.8936ms
+2024-02-27 11:45:45.055 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:45:45.073 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:45:45.077 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 21.8250ms
+2024-02-27 11:45:45.109 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 36.4371ms
+2024-02-27 11:45:45.377 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:45:45.570 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 192.4958ms
+2024-02-27 11:46:08.754 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:46:09.185 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:46:09.194 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:46:09.199 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:46:09.200 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:46:09.201 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:46:10.004 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:46:10.345 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 345.3583ms
+2024-02-27 11:46:10.387 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:46:10.405 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:46:10.407 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 20.0688ms
+2024-02-27 11:46:10.450 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 44.6718ms
+2024-02-27 11:46:10.528 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:46:10.737 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 209.0660ms
+2024-02-27 11:46:13.286 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:46:13.377 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:46:13.406 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:46:15.208 +01:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:46:15.322 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:46:15.351 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 1939.2249ms
+2024-02-27 11:46:15.354 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:46:15.369 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 2082.9322ms
+2024-02-27 11:46:21.507 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:46:21.511 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:46:21.524 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:46:21.675 +01:00 [INF] Executed DbCommand (28ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:46:21.681 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:46:21.683 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 157.2924ms
+2024-02-27 11:46:21.685 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:46:21.686 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 179.1396ms
+2024-02-27 11:50:03.398 +01:00 [INF] User profile is available. Using 'C:\Users\johnk\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-02-27 11:50:03.847 +01:00 [INF] Now listening on: https://localhost:7143
+2024-02-27 11:50:03.858 +01:00 [INF] Now listening on: http://localhost:5168
+2024-02-27 11:50:03.862 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-02-27 11:50:03.893 +01:00 [INF] Hosting environment: Development
+2024-02-27 11:50:03.894 +01:00 [INF] Content root path: C:\Work\GitHub\CSharp-Learning\Build ASP.NET Core Web API\NZWalks\NZWalks\NZWalks.API
+2024-02-27 11:50:05.058 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:50:05.573 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 519.1670ms
+2024-02-27 11:50:05.624 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:50:05.643 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:50:05.656 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 31.4720ms
+2024-02-27 11:50:05.685 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 42.3182ms
+2024-02-27 11:50:05.789 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:50:06.033 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 243.8789ms
+2024-02-27 11:50:40.676 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions - -
+2024-02-27 11:50:40.767 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:50:40.794 +01:00 [INF] Route matched with {action = "GetAll", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll() on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:50:42.662 +01:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+2024-02-27 11:50:42.796 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[NZWalks.API.Models.DTO.RegionDto, NZWalks.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-02-27 11:50:42.830 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API) in 2029.0818ms
+2024-02-27 11:50:42.833 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetAll (NZWalks.API)'
+2024-02-27 11:50:42.846 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions - - - 200 - application/json;+charset=utf-8 2170.0804ms
+2024-02-27 11:50:50.501 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:50:50.506 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:50:50.525 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:50:50.706 +01:00 [INF] Executed DbCommand (30ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:50:50.717 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:50:50.720 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 189.6745ms
+2024-02-27 11:50:50.722 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:50:50.724 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 223.2726ms
+2024-02-27 11:51:35.833 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:51:35.838 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:51:35.840 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:51:36.720 +01:00 [INF] Request starting HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - -
+2024-02-27 11:51:36.721 +01:00 [INF] Executing endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:51:36.722 +01:00 [INF] Route matched with {action = "GetById", controller = "Regions"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(System.Guid) on controller NZWalks.API.Controllers.RegionsController (NZWalks.API).
+2024-02-27 11:51:36.792 +01:00 [INF] Executed DbCommand (8ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:51:36.800 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:51:36.800 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [r].[Id], [r].[Code], [r].[Name], [r].[RegionImgUrl]
+FROM [Regions] AS [r]
+WHERE [r].[Id] = @__id_0
+2024-02-27 11:51:36.801 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 77.2841ms
+2024-02-27 11:51:36.803 +01:00 [INF] Executing OkObjectResult, writing value of type 'NZWalks.API.Models.DTO.RegionDto'.
+2024-02-27 11:51:36.804 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:51:36.806 +01:00 [INF] Executed action NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API) in 963.6754ms
+2024-02-27 11:51:36.807 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 86.7770ms
+2024-02-27 11:51:36.807 +01:00 [INF] Executed endpoint 'NZWalks.API.Controllers.RegionsController.GetById (NZWalks.API)'
+2024-02-27 11:51:36.811 +01:00 [INF] Request finished HTTP/1.1 GET https://localhost:7143/api/regions/906cb139-415a-4bbb-a174-1a1faf9fb1f6 - - - 200 - application/json;+charset=utf-8 977.4903ms
+2024-02-27 11:51:37.733 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/index.html - -
+2024-02-27 11:51:37.758 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/index.html - - - 200 - text/html;charset=utf-8 24.7101ms
+2024-02-27 11:51:37.803 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - -
+2024-02-27 11:51:37.806 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_framework/aspnetcore-browser-refresh.js - - - 200 12354 application/javascript;+charset=utf-8 3.1489ms
+2024-02-27 11:51:37.821 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/_vs/browserLink - -
+2024-02-27 11:51:37.842 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.0238ms
+2024-02-27 11:51:37.912 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - -
+2024-02-27 11:51:37.926 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7143/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.9057ms

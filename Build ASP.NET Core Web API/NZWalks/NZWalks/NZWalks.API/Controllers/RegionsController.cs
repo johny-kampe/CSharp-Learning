@@ -39,40 +39,48 @@ namespace NZWalks.API.Controllers
         //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetAll()
         {
-            try
-            {
-                throw new Exception("This is a new exception");
+            //try
+            //{
+            //    throw new Exception("This is a new exception");
 
-                logger.LogInformation("GetAllRegions Action Method was invoked");
+            //    logger.LogInformation("GetAllRegions Action Method was invoked");
 
-                logger.LogWarning("This is a warning log");
+            //    logger.LogWarning("This is a warning log");
 
-                logger.LogError("This is an error log");
+            //    logger.LogError("This is an error log");
 
-                throw new Exception("This is a custom exception");
+            //    throw new Exception("This is a custom exception");
 
-                // Get Data From Database - Domain models
-                var regionsDomain = await regionRepository.GetAllAsync();
+            //    // Get Data From Database - Domain models
+            //    var regionsDomain = await regionRepository.GetAllAsync();
 
-                var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+            //    var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
 
-                logger.LogInformation($"Finished GetAllRegions request with data: {JsonSerializer.Serialize(regionsDomain)}");
+            //    logger.LogInformation($"Finished GetAllRegions request with data: {JsonSerializer.Serialize(regionsDomain)}");
 
-                // Return DTOs
-                return Ok(regionsDto);
-            }
-            catch (Exception ex)
-            {
-                logger.LogError(ex, ex.Message);
-                throw;
-            }
+            //    // Return DTOs
+            //    return Ok(regionsDto);
+            //}
+            //catch (Exception ex)
+            //{
+            //    logger.LogError(ex, ex.Message);
+            //    throw;
+            //}
+
+            // Get Data From Database - Domain models
+            var regionsDomain = await regionRepository.GetAllAsync();
+
+            var regionsDto = mapper.Map<List<RegionDto>>(regionsDomain);
+
+            return Ok(regionsDto);
+
         }
 
         // GET REGION BY ID
         // GET: https://localhost:portnumber/api/regions{id}
         [HttpGet]
         [Route("{id:Guid}")]
-        [Authorize(Roles = "Reader")]
+        //[Authorize(Roles = "Reader")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
             //var region = dbContext.Regions.Find(id);
@@ -96,9 +104,8 @@ namespace NZWalks.API.Controllers
         // POST: To Create New Region
         // POST: https://localhost:portnumber/api/regions
         [HttpPost]
-        [ValidateModel]
-        [Authorize]
-        [Authorize(Roles = "Writer")]
+        //[Authorize]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
             //Map or Convert DTO to Domain Model
@@ -119,7 +126,7 @@ namespace NZWalks.API.Controllers
         [Route("{id:Guid}")]
         [ValidateModel]
         [Authorize]
-        [Authorize(Roles = "Writer")]
+        //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateRegionRequestDto updateRegionRequestDto)
         {
             // Map DTO to Domain Model
@@ -145,7 +152,7 @@ namespace NZWalks.API.Controllers
         [HttpDelete]
         [Route("{id:Guid}")]
         [Authorize]
-        [Authorize(Roles = "Writer,Reader")]
+        //[Authorize(Roles = "Writer,Reader")]
         public async Task<IActionResult> Delete([FromRoute] Guid id)
         {
             // Check if Region exists

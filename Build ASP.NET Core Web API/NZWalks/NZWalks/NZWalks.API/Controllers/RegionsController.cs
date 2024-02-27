@@ -104,8 +104,7 @@ namespace NZWalks.API.Controllers
         // POST: To Create New Region
         // POST: https://localhost:portnumber/api/regions
         [HttpPost]
-        [ValidateModel]
-        [Authorize]
+        //[Authorize]
         //[Authorize(Roles = "Writer")]
         public async Task<IActionResult> Create([FromBody] AddRegionRequestDto addRegionRequestDto)
         {
